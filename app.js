@@ -24,6 +24,12 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/project', (req, res) => {
+    res.render('project.hbs',{
+        pageTitle: 'Project Page'
+    });
+});
+
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log(`Server is up on port ${PORT}`);
